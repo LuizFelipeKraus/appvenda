@@ -1,0 +1,10 @@
+1;Sofá;800;true;Marrom;Couro
+2;Cama de Casal;600;true;Branco;Madeira
+3;Mesa de Jantar;450;true;Marrom;MDF
+4;Cadeira de Escritório;150;true;Preto;Couro Sintético
+5;Estante;250;true;Carvalho;MDF
+6;Mesa de Centro;120;true;Preto;Vidro
+7;Guarda-Roupa;700;true;Branco;MDF
+8;Cômoda;300;true;Marrom;Madeira
+9;Cadeira de Jantar;80;true;Branco;Plástico
+10;Rack de TV;350;true;Marrom;MDF
