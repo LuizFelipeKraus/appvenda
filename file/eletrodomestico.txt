@@ -4,7 +4,6 @@
 4;Aspirador de Pó;149;true;24;Electrolux;220
 5;Secador de Cabelo;59;true;12;Taiff;110
 6;Forno Elétrico;249;true;24;Consul;220
-7;Notebook;1399;true;12;Dell;Não Aplicável
 8;Cafeteira Elétrica;79;true;12;Arno;110
 9;Ferro de Passar;39;true;12;Philips;220
 10;Ventilador de Teto;159;true;12;Ventisilva;110

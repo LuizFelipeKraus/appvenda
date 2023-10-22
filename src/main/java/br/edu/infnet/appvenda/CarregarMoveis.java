@@ -3,6 +3,7 @@ package br.edu.infnet.appvenda;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,8 @@ import br.edu.infnet.appvenda.model.service.ServicoMoveis;
 
 @Component
 public class CarregarMoveis implements ApplicationRunner{
+	
+	@Autowired
 	private ServicoMoveis moveisServico;
 	
 	@Override
@@ -37,7 +40,6 @@ public class CarregarMoveis implements ApplicationRunner{
 			
 			moveisServico.incluir(moveis);
 			
-			System.out.println("Moveis: " + moveis);
 			linha = leitura.readLine();
 		}
 		

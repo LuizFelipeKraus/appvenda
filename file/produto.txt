@@ -1,0 +1,19 @@
+1;Sofá;800;true;Marrom;Couro;;M
+2;Cama de Casal;600;true;Branco;Madeira;;M
+3;Mesa de Jantar;450;true;Marrom;MDF;;M
+4;Cadeira de Escritório;150;true;Preto;Couro Sintético;;M
+5;Estante;250;true;Carvalho;MDF;;M
+6;Mesa de Centro;120;true;Preto;Vidro;;M
+7;Guarda-Roupa;700;true;Branco;MDF;;M
+8;Cômoda;300;true;Marrom;Madeira;;M
+9;Cadeira de Jantar;80;true;Branco;Plástico;;M
+10;Rack de TV;350;true;Marrom;MDF;;M
+1;Televisor;699;true;24;Samsung;110;E
+2;Geladeira;1899;true;36;Brastemp;220;E
+3;Liquidificador;89;true;12;Philips Walita;110;E
+4;Aspirador de Pó;149;true;24;Electrolux;220;E
+5;Secador de Cabelo;59;true;12;Taiff;110;E
+6;Forno Elétrico;249;true;24;Consul;220;E
+8;Cafeteira Elétrica;79;true;12;Arno;110;E
+9;Ferro de Passar;39;true;12;Philips;220;E
+10;Ventilador de Teto;159;true;12;Ventisilva;110;E

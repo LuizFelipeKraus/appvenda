@@ -3,6 +3,7 @@ package br.edu.infnet.appvenda;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,8 @@ import br.edu.infnet.appvenda.model.service.ServicoEletrodomestico;
 
 @Component
 public class CarregarEletrodomestico implements ApplicationRunner{
+	
+	@Autowired
 	private ServicoEletrodomestico eletrodomesticoServico;
 	
 	@Override
@@ -39,7 +42,7 @@ public class CarregarEletrodomestico implements ApplicationRunner{
 			eletronico.setVoltagem(Integer.valueOf(campos[6]));
 			
 			eletrodomesticoServico.incluir(eletronico);
-			System.out.println("Eletronico: " + eletronico);
+			
 			linha = leitura.readLine();
 		}
 		

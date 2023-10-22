@@ -4,6 +4,8 @@ public class Eletrodomestico extends Produto{
 	private String marcar;
 	private int voltagem;
 	private int garantia;
+	
+	
 	public String getMarcar() {
 		return marcar;
 	}

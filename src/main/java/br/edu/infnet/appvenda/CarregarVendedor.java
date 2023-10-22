@@ -3,6 +3,7 @@ package br.edu.infnet.appvenda;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,8 @@ import br.edu.infnet.appvenda.model.service.ServicoVendedor;
 
 @Component
 public class CarregarVendedor implements ApplicationRunner{
+	
+	@Autowired
 	private ServicoVendedor vendedorServico;
 
 	@Override
