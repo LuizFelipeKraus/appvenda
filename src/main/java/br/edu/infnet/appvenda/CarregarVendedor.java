@@ -38,7 +38,6 @@ public class CarregarVendedor implements ApplicationRunner{
 			vendedor.setTelefone(campos[3]);
 			
 			vendedorServico.incluir(vendedor);
-			System.out.println("Vendedor: " + vendedor);
 			linha = leitura.readLine();
 		}
 		

@@ -1,23 +1,24 @@
 package br.edu.infnet.appvenda.model.service;
 
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.edu.infnet.appvenda.model.domain.Eletrodomestico;
+import br.edu.infnet.appvenda.model.repository.EletrodomesticoRepository;
 
 @Service
 public class ServicoEletrodomestico {
-private Map<Integer,Eletrodomestico> mapaEletronico = new HashMap<Integer,Eletrodomestico>();
+	@Autowired
+	private EletrodomesticoRepository repositoryEletrodomestico;
 	
 	public void incluir(Eletrodomestico eletronico) {
-		mapaEletronico.put(eletronico.getCodigo(), eletronico);
+		repositoryEletrodomestico.save(eletronico);
 	}
 	
 	public Collection<Eletrodomestico> obterLista(){
-		return mapaEletronico.values();
+		return (Collection<Eletrodomestico>) repositoryEletrodomestico.findAll();
 	}
 	
 }

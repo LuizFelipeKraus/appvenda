@@ -6,12 +6,15 @@ import java.io.FileReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 
 import br.edu.infnet.appvenda.model.domain.Eletrodomestico;
 import br.edu.infnet.appvenda.model.domain.Moveis;
 import br.edu.infnet.appvenda.model.domain.Produto;
 import br.edu.infnet.appvenda.model.service.ServicoProduto;
 
+
+@Component
 public class CarregarProduto implements ApplicationRunner{
 	@Autowired
 	private ServicoProduto produtoServico;
