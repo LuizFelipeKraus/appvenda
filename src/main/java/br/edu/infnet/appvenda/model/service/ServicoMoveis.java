@@ -20,4 +20,12 @@ public class ServicoMoveis {
 	public Collection<Moveis> obterLista(){
 		return (Collection<Moveis>) repositoryMoveis.findAll();
 	}
+	
+	public long obterQtde() {
+		return repositoryMoveis.count();
+	}
+	
+	public void excluir(Integer id) {
+		repositoryMoveis.deleteById(id);
+	}
 }

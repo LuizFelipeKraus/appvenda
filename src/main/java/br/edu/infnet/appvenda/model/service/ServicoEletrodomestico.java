@@ -13,12 +13,20 @@ public class ServicoEletrodomestico {
 	@Autowired
 	private EletrodomesticoRepository repositoryEletrodomestico;
 	
-	public void incluir(Eletrodomestico eletronico) {
-		repositoryEletrodomestico.save(eletronico);
+
+	public void incluir(Eletrodomestico Eletrodomestico) {
+		repositoryEletrodomestico.save(Eletrodomestico);
 	}
 	
-	public Collection<Eletrodomestico> obterLista(){
+	public Collection<Eletrodomestico> obterLista(){	
 		return (Collection<Eletrodomestico>) repositoryEletrodomestico.findAll();
 	}
+
+	public long obterQtde() {
+		return repositoryEletrodomestico.count();
+	}
 	
+	public void excluir(Integer id) {
+		repositoryEletrodomestico.deleteById(id);
+	}
 }

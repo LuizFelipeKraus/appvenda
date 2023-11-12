@@ -18,6 +18,13 @@ public class Produto {
 	private float preco;
 	private boolean estoque;
 	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	
 	public boolean isEstoque() {
 		return estoque;
