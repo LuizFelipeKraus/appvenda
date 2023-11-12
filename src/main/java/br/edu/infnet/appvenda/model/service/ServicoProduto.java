@@ -32,6 +32,8 @@ public class ServicoProduto {
 	public long obterQtde() {
 		return repositoryProduto.count();
 	}
+	
+	
 	public void excluir(Integer id) {
 		repositoryProduto.deleteById(id);
 	}
