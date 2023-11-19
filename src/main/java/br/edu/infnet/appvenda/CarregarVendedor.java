@@ -35,7 +35,6 @@ public class CarregarVendedor implements ApplicationRunner{
 			vendedor.setNome(campos[0]);
 			vendedor.setCpf(campos[1]);
 			vendedor.setEmail(campos[2]);
-			vendedor.setTelefone(campos[3]);
 			
 			vendedorServico.incluir(vendedor);
 			linha = leitura.readLine();

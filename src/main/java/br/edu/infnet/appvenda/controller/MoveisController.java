@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import br.edu.infnet.appvenda.model.domain.Moveis;
 import br.edu.infnet.appvenda.model.service.ServicoMoveis;
 
 public class MoveisController {
@@ -32,4 +33,17 @@ public class MoveisController {
 
 		return appController.showHome(model);
 	}
+	
+	@GetMapping(value = "/moveis/pesquisar")
+	public String pesquisar(Model model, String campoBusca) {
+
+		Moveis moveis = moveisService.pesquisar(campoBusca);
+		
+		if(moveis != null) {
+			model.addAttribute("objeto", moveis);
+			return appController.showHome(model);
+		}
+		return "redirect:/moveis/lista";
+	}
+	
 }

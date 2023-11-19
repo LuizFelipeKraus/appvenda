@@ -38,6 +38,9 @@ public class ServicoProduto {
 		repositoryProduto.deleteById(id);
 	}
 
+	public Produto pesquisar(Integer codigo) {
+		return repositoryProduto.findByCodigo(codigo);
+	}
 	
 
 }

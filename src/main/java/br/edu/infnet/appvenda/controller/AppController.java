@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import br.edu.infnet.appvenda.model.service.ServicoMoveis;
 import br.edu.infnet.appvenda.model.service.ServicoEletrodomestico;
+import br.edu.infnet.appvenda.model.service.ServicoInformacao;
 import br.edu.infnet.appvenda.model.service.ServicoProduto;
 import br.edu.infnet.appvenda.model.service.ServicoVendedor;
 
@@ -21,13 +22,16 @@ public class AppController {
 	private ServicoMoveis moveisService;
 	@Autowired
 	private ServicoEletrodomestico eletrodomesticoService;
+	@Autowired
+	private ServicoInformacao informacaoService;
 
 	@GetMapping(value = "/")
 	public String showHome(Model model) {
 		
+		model.addAttribute("informacoes", informacaoService.obterLista());
 		model.addAttribute("qtdeVendedor", vendedorService.obterQtde());
 		model.addAttribute("qtdeProduto", produtoService.obterQtde());
-		model.addAttribute("qtdeAlimenticio", moveisService.obterQtde());
+		model.addAttribute("qtdeMoveis", moveisService.obterQtde());
 		model.addAttribute("qtdeEletronico", eletrodomesticoService.obterQtde());
 
 		return "home";
@@ -42,19 +46,19 @@ public class AppController {
 		return showHome(model);
 	}
 
-	@GetMapping(value = "/alimenticio/lista")
+	@GetMapping(value = "/moveis/lista")
 	public String obterListaAlimenticio(Model model) {
 		
-		model.addAttribute("titulo", "Produtos Alimentícios:");
+		model.addAttribute("titulo", "Produtos moveis:");
 		model.addAttribute("listagem", moveisService.obterLista());
 
 		return showHome(model);
 	}
 
-	@GetMapping(value = "/eletronico/lista")
+	@GetMapping(value = "/eletrodomestico/lista")
 	public String obterListaEletronico(Model model) {
 		
-		model.addAttribute("titulo", "Produtos Eletrônicos:");
+		model.addAttribute("titulo", "Produtos Eletrodomestico:");
 		model.addAttribute("listagem", eletrodomesticoService.obterLista());
 
 		return showHome(model);

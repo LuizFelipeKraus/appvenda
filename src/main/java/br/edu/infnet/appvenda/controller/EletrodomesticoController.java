@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import br.edu.infnet.appvenda.model.domain.Eletrodomestico;
 import br.edu.infnet.appvenda.model.service.ServicoEletrodomestico;
 
 public class EletrodomesticoController {
@@ -31,5 +32,17 @@ public class EletrodomesticoController {
 		model.addAttribute("listagem", eletrodomesticoService.obterLista());
 
 		return appController.showHome(model);
+	}
+	
+	@GetMapping(value = "/eletrodomestico/pesquisar")
+	public String pesquisar(Model model, String campoBusca) {
+
+		Eletrodomestico eletrodomestico = eletrodomesticoService.pesquisar(campoBusca);
+		
+		if(eletrodomestico != null) {
+			model.addAttribute("objeto", eletrodomestico);
+			return appController.showHome(model);
+		}
+		return "redirect:/eletrodomestico/lista";
 	}
 }

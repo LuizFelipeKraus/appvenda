@@ -1,4 +1,4 @@
-package clients;
+package br.edu.infnet.appvenda.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

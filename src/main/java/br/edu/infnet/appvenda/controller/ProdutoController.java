@@ -5,6 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import br.edu.infnet.appvenda.model.domain.Produto;
+import br.edu.infnet.appvenda.model.domain.Vendedor;
 import br.edu.infnet.appvenda.model.service.ServicoProduto;
 
 public class ProdutoController {
@@ -31,5 +33,17 @@ public class ProdutoController {
 		model.addAttribute("listagem", produtoService.obterLista());
 
 		return appController.showHome(model);
+	}
+	
+	@GetMapping(value = "/produto/pesquisar")
+	public String pesquisar(Model model, Integer campoBusca) {
+
+		Produto produto = produtoService.pesquisar(campoBusca);
+		
+		if(produto != null) {
+			model.addAttribute("objeto", produto);
+			return appController.showHome(model);
+		}
+		return "redirect:/produto/lista";
 	}
 }

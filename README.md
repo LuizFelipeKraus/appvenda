@@ -100,3 +100,42 @@ A terceira feature tem como objetivo melhorar a usabilidade da aplicação, perm
 
 8. **Consumo da API de CEP:**
    - Integrar uma API de consulta de CEP para recuperar informações com base no número do CEP informado. Atualizar os dados obtidos da API no banco de dados, associando-os aos registros dos vendedores. Isso permitirá que os dados de CEP estejam disponíveis para visualização na tela.
+
+
+# FEATURE 04
+
+A quarta feature do projeto abrange melhorias significativas na interação com dados, organização e integração por meio do ajuste do processo de exclusão, ordenação mais flexível, busca unificada e a introdução de uma API para manipulação eficiente das informações.
+
+Essa feature visa proporcionar uma experiência mais completa e eficiente aos usuários, permitindo uma interação mais avançada com os dados, organização personalizada e uma integração mais robusta entre o frontend e a API.
+
+Certifique-se de realizar testes abrangentes para garantir a estabilidade e a eficácia das novas funcionalidades. Abaixo estão os principais requisitos e atividades a serem entregues nesta feature:
+
+1. **Ajuste do Processo de Exclusão:**
+   - Aprimore o processo de exclusão para evitar informações órfãs no relacionamento entre vendedores e produtos. Isso garante a consistência referencial no banco de dados, mantendo a integridade dos dados.
+
+2. **Organização da Ordenação das Informações:**
+   - Implemente uma funcionalidade que permita a organização personalizada das informações nos cadastros. Cada contexto, como vendedores, produtos, etc., deve ter seu critério de ordenação específico, proporcionando flexibilidade aos usuários.
+
+3. **Busca Unificada:**
+   - Integre uma funcionalidade de busca unificada que permita aos usuários procurar informações em todos os cadastros a partir da tela principal do projeto. Isso melhora a usabilidade e facilita o acesso rápido aos dados desejados.
+
+4. **Criação de API para Cadastro de Informações:**
+   - Desenvolva uma API para cadastrar informações no projeto. Os endpoints "incluir" e "excluir" devem ser criados, possibilitando a manipulação eficiente dos dados por meio dessa interface.
+
+5. **Atualização do Projeto Web para Consumir a API:**
+   - Faça as devidas atualizações no projeto web para integrar e consumir os novos endpoints da API. Certifique-se de que a comunicação entre o frontend e o backend seja eficaz e que as operações de inclusão e exclusão sejam refletidas corretamente na interface do usuário.
+
+6. **Atualização da Tela Home para Apresentar Informações da API:**
+   - Modifique a tela inicial (home) para apresentar as informações provenientes da API. Isso pode incluir a exibição de dados cadastrados, estatísticas ou qualquer outra informação relevante obtida por meio dos novos endpoints.
+
+7. **Novos Endpoints na API:**
+   - Expanda a API para incluir novos endpoints além do "obterLista". Implemente os endpoints "incluir" e "excluir" para permitir operações completas de CRUD (criação, leitura, atualização e exclusão) por meio da API.
+
+8. **Atualização da API para Suportar Novos Endpoints:**
+   - Atualize a API para garantir que ela esteja configurada corretamente e suporte os novos endpoints "incluir" e "excluir". Certifique-se de que a autenticação, validação e demais aspectos de segurança estejam adequadamente implementados.
+
+
+
+# API SERVICE
+
+A api se encontra no Repositorio https://github.com/LuizFelipeKraus/apivendas
